@@ -1,0 +1,1 @@
+[1001, Hotel Luxury, 5, 2024-05-25, HABITACIONES--[Habitacion(codigoHabitacion=081, tipoHabitacion='Suite', precioNoche=120.0, ocupada=false, fechaUltimaOcupacion=null)]--]
