@@ -82,7 +82,7 @@ fun main() {
     Hotel.verHoteles()
 
     // Eliminar hotel
-    //Hotel.eliminarHotel(1001)
+    Hotel.eliminarHotel(1001)
 
     // Verificar
     Hotel.verHoteles()
