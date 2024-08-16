@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "172506537831",
+    "project_id": "djct-2024a-sw-gr2",
+    "storage_bucket": "djct-2024a-sw-gr2.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:172506537831:android:fc519d87de5414ce8b19c2",
+        "android_client_info": {
+          "package_name": "com.example.a2024aswgr2djct"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyCy2XBRqn1N9kyQ8o6nnLb0eV1f4wQGm6s"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}

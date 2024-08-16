@@ -1,1 +1,3 @@
-[1001, Hotel Luxury, 5, 2024-05-25, HABITACIONES--[Habitacion(codigoHabitacion=081, tipoHabitacion='Suite', precioNoche=120.0, ocupada=false, fechaUltimaOcupacion=null)]--]
+1002, Hotel Luxury, 5, 2024-05-30, HABITACIONES--[Habitacion(codigoHabitacion=201, tipoHabitacion='Suite', precioNoche=120.0, ocupada=false, fechaUltimaOcupacion=null), Habitacion(codigoHabitacion=202, tipoHabitacion='Doble', precioNoche=80.0, ocupada=true, fechaUltimaOcupacion=2024-05-30)]--
+1002, Hotel Luxury, 5, 2024-05-30, HABITACIONES--[Habitacion(codigoHabitacion=201, tipoHabitacion='Suite', precioNoche=120.0, ocupada=false, fechaUltimaOcupacion=null), Habitacion(codigoHabitacion=202, tipoHabitacion='Doble', precioNoche=80.0, ocupada=true, fechaUltimaOcupacion=2024-05-30)]--
+1001, Hotel Luxury, 4, 2024-05-25, HABITACIONES--[Habitacion(codigoHabitacion=081, tipoHabitacion='Suite', precioNoche=120.0, ocupada=false, fechaUltimaOcupacion=null)]--
