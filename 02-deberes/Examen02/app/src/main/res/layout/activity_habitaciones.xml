@@ -10,13 +10,6 @@
         android:orientation="vertical"
         android:padding="16dp">
 
-        <Button
-            android:id="@+id/btn_ubicacion1"
-            android:layout_width="match_parent"
-            android:layout_height="wrap_content"
-            android:text="¿Cómo llegar?"
-            style="@style/CustomButtonStyle" />
-
         <TextView
             android:id="@+id/txt_titulo_habitaciones"
             android:layout_width="wrap_content"
@@ -26,6 +19,13 @@
             android:text="HABITACIONES"
             android:textSize="20sp"
             android:textStyle="bold" />
+
+        <Button
+            android:id="@+id/btn_ubicacion1"
+            style="@style/CustomButtonStyle"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:text="¿Cómo llegar al hotel?" />
 
         <ListView
             android:id="@+id/lv_listHabitaciones"

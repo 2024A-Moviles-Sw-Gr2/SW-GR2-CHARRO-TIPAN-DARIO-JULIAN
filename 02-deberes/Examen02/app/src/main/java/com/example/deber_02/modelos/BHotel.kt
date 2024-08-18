@@ -34,7 +34,6 @@ class BHotel(
     }
 
     companion object CREATOR : Parcelable.Creator<BHotel> {
-        private val archivoHoteles: File = File("src/main/hoteles.txt")
 
         override fun createFromParcel(parcel: Parcel): BHotel {
             return BHotel(parcel)
@@ -44,59 +43,6 @@ class BHotel(
             return arrayOfNulls(size)
         }
 
-        fun crearHotel(hotel: BHotel) {
-            println("\n---- CREAR HOTEL ----")
-            val registro = "${hotel.codigoHotel}, ${hotel.nombreHotel}, ${hotel.categoria}, ${hotel.fechaInauguracion}, HABITACIONES--${hotel.listaHabitaciones}--"
-            archivoHoteles.appendText("\n$registro")
-            println("Hotel registrado con éxito! [$registro]")
-        }
-
-        fun verHoteles() {
-            println("\n---- HOTELES REGISTRADOS ----")
-            println(archivoHoteles.readText())
-        }
-
-        fun eliminarHotel(codigoHotel: Int) {
-            println("\n---- ELIMINAR HOTEL ----")
-            val lineas = archivoHoteles.readLines()
-            val lineasActualizadas = lineas.filter { !it.contains(codigoHotel.toString()) }
-            archivoHoteles.writeText(lineasActualizadas.joinToString("\n"))
-            println("Hotel $codigoHotel ha sido eliminado")
-        }
-
-        fun actualizarHotel(
-            codigoHotel: Int,
-            nombreHotel: String? = null,
-            categoria: Int? = null,
-            fechaInauguracion: LocalDate? = null,
-            listaHabitaciones: MutableList<BHabitacion>? = null
-        ) {
-            println("\n---- ACTUALIZAR HOTEL ----")
-            val lineas = archivoHoteles.readLines()
-            var lineaActualizar: String = ""
-            val lineasActualizadas = lineas.filter { hotel: String ->
-                val seleccionado: Boolean = hotel.contains(codigoHotel.toString())
-                if (seleccionado) {
-                    lineaActualizar = hotel
-                }
-                return@filter !seleccionado
-            }
-
-            val hotel = lineaActualizar.split(", ")
-            val hotelActualizado = hotel.mapIndexed { index, atributo ->
-                when (index) {
-                    1 -> nombreHotel ?: atributo
-                    2 -> categoria?.toString() ?: atributo
-                    3 -> fechaInauguracion?.toString() ?: atributo
-                    4 -> listaHabitaciones?.toString() ?: atributo
-                    else -> atributo
-                }
-            }
-
-            archivoHoteles.writeText(lineasActualizadas.joinToString("\n"))
-            archivoHoteles.appendText("\n${hotelActualizado.joinToString(", ")}")
-            println("Hotel $codigoHotel ha sido actualizado")
-        }
     }
 
     override fun toString(): String {

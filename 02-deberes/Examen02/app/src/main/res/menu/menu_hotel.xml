@@ -10,5 +10,5 @@
         android:title="Eliminar" />
     <item
         android:id="@+id/menu_hotel_ver"
-            android:title="Ver Habitacion"/>
+        android:title="Ver Habitaciones" />
 </menu>

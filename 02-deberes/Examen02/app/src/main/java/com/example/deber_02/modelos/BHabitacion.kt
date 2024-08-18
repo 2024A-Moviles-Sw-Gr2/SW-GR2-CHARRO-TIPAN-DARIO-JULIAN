@@ -32,7 +32,6 @@ class BHabitacion(
     }
 
     companion object CREATOR : Parcelable.Creator<BHabitacion> {
-        private val archivoHabitaciones: File = File("src/main/habitaciones.txt")
 
         override fun createFromParcel(parcel: Parcel): BHabitacion {
             return BHabitacion(parcel)
@@ -42,59 +41,7 @@ class BHabitacion(
             return arrayOfNulls(size)
         }
 
-        fun crearHabitacion(habitacion: BHabitacion) {
-            println("\n---- CREACION DE HABITACION ----")
-            val registro = "${habitacion.codigoHabitacion}, ${habitacion.tipoHabitacion}, ${habitacion.precioNoche}, ${habitacion.ocupada}, ${habitacion.fechaUltimaOcupacion ?: "N/A"}"
-            archivoHabitaciones.appendText("\n$registro")
-            println("Habitación registrada con éxito! [$registro]")
-        }
 
-        fun verHabitaciones() {
-            println("\n---- HABITACIONES REGISTRADAS ----")
-            println(archivoHabitaciones.readText())
-        }
-
-        fun eliminarHabitacion(codigoHabitacion: Int) {
-            println("\n---- ELIMINAR HABITACION ----")
-            val lineas = archivoHabitaciones.readLines()
-            val lineasActualizadas = lineas.filter { !it.contains(codigoHabitacion.toString()) }
-            archivoHabitaciones.writeText(lineasActualizadas.joinToString("\n"))
-            println("Habitación $codigoHabitacion ha sido eliminada")
-        }
-
-        fun actualizarHabitacion(
-            codigoHabitacion: Int,
-            tipoHabitacion: String? = null,
-            precioNoche: Double? = null,
-            ocupada: Boolean? = null,
-            fechaUltimaOcupacion: LocalDate? = null
-        ) {
-            println("\n---- ACTUALIZAR HABITACION ----")
-            val lineas = archivoHabitaciones.readLines()
-            var lineaActualizar: String = ""
-            val lineasActualizadas = lineas.filter { habitacion: String ->
-                val seleccionado: Boolean = habitacion.contains(codigoHabitacion.toString())
-                if (seleccionado) {
-                    lineaActualizar = habitacion
-                }
-                return@filter !seleccionado
-            }
-
-            val habitacion = lineaActualizar.split(", ")
-            val habitacionActualizada = habitacion.mapIndexed { index, atributo ->
-                when (index) {
-                    1 -> tipoHabitacion ?: atributo
-                    2 -> precioNoche?.toString() ?: atributo
-                    3 -> ocupada?.toString() ?: atributo
-                    4 -> fechaUltimaOcupacion?.toString() ?: atributo
-                    else -> atributo
-                }
-            }
-
-            archivoHabitaciones.writeText(lineasActualizadas.joinToString("\n"))
-            archivoHabitaciones.appendText("\n${habitacionActualizada.joinToString(", ")}")
-            println("Habitación $codigoHabitacion ha sido actualizada")
-        }
     }
 
     override fun toString(): String {
