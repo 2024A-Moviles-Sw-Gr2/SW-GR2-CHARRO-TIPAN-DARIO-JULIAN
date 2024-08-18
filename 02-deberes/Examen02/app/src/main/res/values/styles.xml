@@ -1,0 +1,22 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <!-- Tema personalizado -->
+    <style name="AppTheme" parent="Theme.AppCompat.Light.NoActionBar">
+        <!-- Colores de fondo -->
+        <item name="colorPrimary">#2196F3</item> <!-- Azul primario -->
+        <item name="colorPrimaryDark">#1976D2</item> <!-- Azul oscuro -->
+        <item name="colorAccent">#FF4081</item> <!-- Rosa como acento -->
+
+        <!-- Estilos para botones -->
+        <item name="buttonStyle">@style/CustomButtonStyle</item>
+    </style>
+
+    <!-- Estilo personalizado para botones -->
+    <style name="CustomButtonStyle" parent="Widget.AppCompat.Button">
+        <item name="android:background">#2196F3</item> <!-- Azul -->
+        <item name="android:textColor">#FFFFFF</item> <!-- Texto blanco -->
+        <item name="android:padding">12dp</item>
+        <item name="android:layout_margin">8dp</item>
+        <item name="android:gravity">center</item>
+    </style>
+</resources>
