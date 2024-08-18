@@ -1,0 +1,14 @@
+<?xml version="1.0" encoding="utf-8"?>
+<menu xmlns:tools="http://schemas.android.com/tools"
+    xmlns:android="http://schemas.android.com/apk/res/android">
+
+    <item
+        android:id="@+id/menu_hotel_editar"
+        android:title="Editar" />
+    <item
+        android:id="@+id/menu_hotel_eliminar"
+        android:title="Eliminar" />
+    <item
+        android:id="@+id/menu_hotel_ver"
+            android:title="Ver Habitacion"/>
+</menu>

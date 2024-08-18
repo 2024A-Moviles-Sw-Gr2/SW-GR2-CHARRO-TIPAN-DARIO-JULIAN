@@ -1,0 +1,62 @@
+<?xml version="1.0" encoding="utf-8"?>
+<FrameLayout xmlns:android="http://schemas.android.com/apk/res/android"
+    android:id="@+id/cl_crear_habitacion"
+    android:layout_width="match_parent"
+    android:layout_height="match_parent">
+
+    <LinearLayout
+        android:layout_width="match_parent"
+        android:layout_height="match_parent"
+        android:orientation="vertical"
+        android:padding="16dp">
+
+        <TextView
+            android:id="@+id/txt_titulo_habitacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_gravity="center_horizontal"
+            android:layout_marginBottom="16dp"
+            android:text="CREAR HABITACIÓN"
+            android:textSize="20sp"
+            android:textStyle="bold" />
+
+        <EditText
+            android:id="@+id/edt_tipo_habitacion"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Tipo de Habitación"
+            android:inputType="text" />
+
+        <EditText
+            android:id="@+id/edt_precio_noche"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:hint="Precio por Noche"
+            android:inputType="numberDecimal"
+            android:layout_marginTop="8dp" />
+
+        <CheckBox
+            android:id="@+id/cb_ocupada"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Ocupada" />
+
+        <Button
+            android:id="@+id/btn_guardar_habitacion"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="16dp"
+            android:text="Guardar"
+            style="@style/CustomButtonStyle" />
+
+        <Button
+            android:id="@+id/btn_regresar"
+            android:layout_width="wrap_content"
+            android:layout_height="wrap_content"
+            android:layout_marginTop="8dp"
+            android:text="Regresar"
+            style="@style/CustomButtonStyle" />
+
+    </LinearLayout>
+</FrameLayout>
