@@ -18,7 +18,7 @@ class HotelAdapter(context: Context, hoteles: List<BHotel>) : ArrayAdapter<BHote
         val text2 = view.findViewById<TextView>(android.R.id.text2)
 
         text1.text = hotel?.nombreHotel ?: "Nombre desconocido"
-        text2.text = "Categoría: ${hotel?.categoria ?: "Desconocida"}"
+        text2.text = "Categoría: ${hotel?.categoria ?: "Desconocida"} - Fecha inauguración: ${hotel?.fechaInauguracion ?: "Desconocida"}"
 
         view.tag = hotel?.codigoHotel
 
